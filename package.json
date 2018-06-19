@@ -20,7 +20,9 @@
   "scripts": {
     "preinstall": "node core/server/utils/npm/preinstall.js",
     "start": "node index",
-    "test": "grunt validate --verbose"
+    "test": "grunt validate --verbose",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "~0.10.0 || ~0.12.0 || ^4.2.0"
@@ -77,11 +79,12 @@
     "sanitize-html": "1.13.0",
     "semver": "5.3.0",
     "showdown-ghost": "0.3.6",
-    "sqlite3": "3.1.4",
+    "sqlite3": "4.0.0",
     "superagent": "2.2.0",
     "unidecode": "0.1.8",
     "validator": "5.7.0",
-    "xml": "1.0.1"
+    "xml": "1.0.1",
+    "snyk": "^1.83.0"
   },
   "optionalDependencies": {
     "mysql": "2.1.1",
@@ -129,5 +132,6 @@
       "pg",
       "showdown-ghost"
     ]
-  }
+  },
+  "snyk": true
 }
